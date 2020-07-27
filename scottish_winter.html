@@ -66,14 +66,14 @@
 </nav>
 
 
-<h1>Scottish Winter Webcam Picture Archive</h1>
+<h1>Scottish Winter Webcam Photo Archive</h1>
 
 <p>
 </head>
 <body>
 <div class="container-fluid">
 <p class="text-left">
-Pictures from on the hour, every hour from 8 am until 4 pm GMT, 1st Nov until 1st May.
+Photos from on the hour, every hour from 8 am until 4 pm GMT, 1st Nov until 1st May. In order to save space online, I'm only going to keep the images from the last month or so on GitHub. If you're interested in older images, let me know and we'll sort something out.
 
 <p class="text-left">
 Lots of enterprising folk and companies have installed webcams in various mountainous regions in Scotland.
@@ -105,7 +105,31 @@ Hopefully, some folk, somewhere, may find it of use for looking at snow conditio
 </ul>
 </div>
 
-<p>
+<div class="container-fluid">
+<p class="text-left"><b>Some incoherent ramblings</b>
+<br>
+The smorgasbord of weather forecasting tools out there on the Internet is of immense help when planning trips. 
+Most if not all forecast producers rely on Numerical Weather Prediction (NWP) models, which basically try to numerically solve the differential equations describing the atmosphere for future points in time, given the best guess of current atmospheric conditions.
+Gone are the days of the forecast being absolutely wrong (compare the week's warning we had for Storm Ciara/Dennis in 2020 with the 6 hours warning for the 'Great Storm' in 1987). 
+Computer power has increased hugely since the 1950s when NWP models were first invented, and this has helped <a href="http://www.uvm.edu/~cdanfort/nolink/atmos/nature-review-2015.pdf" target="_blank">improve forecasts</a> accordingly. 
+The Met Office like to bandy around that their 4 day forecasts in 2016 <a href="https://www.metoffice.gov.uk/about-us/what/accuracy-and-trust/comparing-forecast-accuracy" target="_blank">were as accurate</a> as a 1 day forecast was in 1980.
+
+<p class="text-left">
+The resolution of forecasts have improved, both spatially and temporally. For example, the Met Office's global model has gridpoints 17 km apart, while their UKV model for just the UK has gridpoints 1.5 km apart. 
+Bear this in mind when using sites such as Meteoblue, WxCharts and Windy, as it's important to know what the resolution of the forecast you're looking at is.
+You would expect that the closer together the grid points in a model are, the more accurate the forecast is going to be.
+
+<p class="text-left">
+I mentioned <i>ensemble forecasts</i> in the description for WxCharts. 
+These work on the principle that we can't know exactly what the precise state of the atmosphere is when we start running a NWP model. 
+So, an ensemble forecast is the same forecast run multiple times with slightly tweaked initial conditions/parameterisations.
+Then, you have a good visualisation of potential outcomes over the next few days. 
+Spaghetti plots are a nice way to look at this as you watch the different ensemble members slowly grow apart as time goes on.
+Typically, ensemble forecasts are run on a lower resolution than the single equivalent <i>deterministic</i> forecast - this is worth bearing in mind.
+
+
+</div>
+
 <center>
 <hr>
 </center>

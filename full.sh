@@ -5,7 +5,7 @@ YR=$(date +%Y)
 MON=$(date +%m)
 DAY=$(date +%d)
 
-
+cd /home/pi/jdconey.github.io/
 #git clone https://github.com/jdconey/jdconey.github.io.git
 git fetch
 

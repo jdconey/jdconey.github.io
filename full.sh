@@ -10,9 +10,9 @@ DAY=$(date +%d)
 git fetch
 
 
-./home/pi/winter_code/cairngorm.sh
-./home/pi/winter_code/glencoe.sh
-./home/pi/winter_code/nevis_range.sh
+. /home/pi/winter_code/cairngorm.sh
+. /home/pi/winter_code/glencoe.sh
+. /home/pi/winter_code/nevis_range.sh
 python3 /home/pi/winter_code/bennevis.py
 
 git add *

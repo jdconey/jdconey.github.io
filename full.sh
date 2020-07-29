@@ -7,7 +7,7 @@ DAY=$(date +%d)
 
 cd /home/pi/jdconey.github.io/
 #git clone https://github.com/jdconey/jdconey.github.io.git
-git fetch
+git pull
 
 
 . /home/pi/winter_code/cairngorm.sh

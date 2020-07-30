@@ -5,8 +5,8 @@ YR=$(date +%Y)
 MON=$(date +%m)
 DAY=$(date +%d)
 
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
+#eval "$(ssh-agent -s)"
+#ssh-add ~/.ssh/id_rsa
 
 cd /home/pi/jdconey.github.io/
 #git clone https://github.com/jdconey/jdconey.github.io.git

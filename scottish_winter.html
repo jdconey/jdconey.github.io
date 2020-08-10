@@ -179,6 +179,23 @@ Both deterministic and ensemble forecasts have their use.
 
 </div>
 
+<div class="container-fluid">
+<p class="text-left"><b>How does this website work?</b>
+<br>
+It's relatively simple to be honest. Most of the webcam images are just jpgs, which are updated every minute or so. The webcam images stay at the same url.
+I've rigged up a few bash and Python scripts to download these images whenever the scripts are run. 
+I've got a Raspberry Pi sitting on my desk which has <code>cron</code> set up to run the bash scripts nine times a day (8 am till 4 pm). I pull the image repository from GitHub, update it with the new images, and push the changes back to GitHub.
+There's a separate script to tidy things up and archive the older images onto a usb stick plugged into the Pi. 
+Then everything magically works and I don't lose long weekends to crying at the console window and browsing Stack Overflow for days on end when I should be doing work instead.
+<br>
+All worth it in the end, I promise.
+<br>
+One future job is to see if I can use machine learning to categorise each image to say whether it's snowy or not & then that'd be a cool way to see how many snowy days we have. That's vaguely related to the PhD I'm hoping to start, honest.
+
+
+
+</div>
+
 <center>
 <hr>
 </center>

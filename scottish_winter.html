@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<link rel="shortcut icon" type=image/ico" href="favicon.ico" id="favicon">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -113,7 +115,7 @@ Current Status: Everything is working alright. For now. Expect new images every 
 Lots of enterprising folk and companies have installed webcams in various mountainous regions in Scotland.
 This idea sprung about on a very relaxed wander into the CIC hut with some pals from my uni hillwalking club in the warmth of January 2020. 
 One of us mentioned that whenever we wanted to check the webcams in Scotland of an evening after uni/work for an idea of snow conditions on the hill, it was nighttime so (surprisingly enough) the current webcam images were not of much use. 
-This is aimed as a potential solution, allowing anyone to have a gander at snow conditions on the hill during daylight hours at any time of the day.
+This website hosts images from during daylight hours, from around the past month or so, for the Scottish mountains, meaning you now don't have to be on the web when you should be writing a thesis or performing complicated dentistry.
 This is also useful for those of us who don't do any prep for a scottish winter weekend so can have a mooch on the way up. 
 Hopefully, some folk, somewhere, may find it of use for looking at snow conditions through the week. Please don't sue me.
 
@@ -133,7 +135,7 @@ I would like to hope, however, that these times are roughly similar! But be awar
 <ul class="text-left">
 <li><a href="https://www.sais.gov.uk/" target="_blank">SAIS</a> - the blogs are of much use as well.</li>
 <li><a href="https://www.ukclimbing.com/logbook/conditions/uk_winter/" target="_blank">UKC Winter Connies</a> - Good old UKC</li>
-<li><a href="https://www.mwis.org.uk/" target="_blank">MWIS</a> - don't forget the planning vids on <a href="https://www.youtube.com/channel/UCzyt5nXxMwj3Mj9_Qo3WTTQ/" target="_blank">YouTube</a> - we all love Garry.</li>
+<li><a href="https://www.mwis.org.uk/" target="_blank">MWIS</a> - don't forget the planning vids on <a href="https://www.youtube.com/channel/UCzyt5nXxMwj3Mj9_Qo3WTTQ/" target="_blank">YouTube</a> - we all love Garry. MWIS also have webcam images on their <a href="https://www.mwis.org.uk/information/webcams" target="_blank">website</a>, as well as <a href="https://www.mwis.org.uk/forecasts/synoptic-charts" target="_blank">synoptic charts and observations</a> from summit weather stations.</li>
 <li><a href="https://www.metoffice.gov.uk/weather/specialist-forecasts/mountain" target="_blank">Met Office Mountain Forecast</a></li>
 <li><a href="https://www.wxcharts.com/" target="_blank">WxCharts</a> - a useful weather model comparison tool - ECMWF > GFS <i>jus' sayin'</i>. Allows you to view the separate ensemble forecast runs which is nice (spaghetti plots are a thing of beauty).</li>
 <li><a href="https://www.meteoblue.com/en/weather/week/ben-nevis_united-kingdom_2641744" target="_blank">Meteoblue</a> - a perennial favourite in the uni club.</li>
@@ -186,7 +188,7 @@ It's relatively simple to be honest. Most of the webcam images are just jpgs, wh
 I've rigged up a few bash and Python scripts to download these images.
 I've got a Raspberry Pi sitting on my desk which has <code>cron</code> set up to run the scripts nine times a day (8 am till 4 pm). I pull the image repository from GitHub, update it with the new images, and push the changes back to GitHub.
 There's a separate script to tidy things up and archive the older images onto a usb stick plugged into the Pi. 
-Then everything magically works and I don't lose long weekends to crying at the console window and browsing Stack Overflow for days on end when I should be doing work instead.
+Then everything magically works and I don't lose long weekends to crying at the console window nor browsing Stack Overflow for days on end when I should be doing work instead.
 <br>
 All worth it in the end, I promise.
 <br>
@@ -217,7 +219,7 @@ One future job is to see if I can use machine learning to categorise each image 
 </div>
 
 <footer>
-  <p>  <p>The webpages on this site were cobbled together by <a href="https://www.twitter.com/Jonathan__Coney" target="_blank">Jonathan Coney</a>. All copyright etc remains with the relevant owners.
+  <p>  <p>The webpages on this site were cobbled together by <a href="https://www.twitter.com/Jonathan__Coney" target="_blank">Jono 'J Dawg' Coney</a>. All copyright etc remains with the relevant owners.
   Don't tell too many people about this please. I would not like to annoy folk who might make it harder for me to scrape these images from their websites. 
   If you've been affected by any of the issues raised by this website, please dial 019467 75254 for more information. 
   "Coney's Connies" name courtesy of Jimmy Nix, and the idea for this wee project came from Roy and Callum. Thank you all xoxo.

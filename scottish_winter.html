@@ -114,10 +114,11 @@ Current Status: Everything is working alright. For now. Expect new images every 
 
 <b>What's new?</b>
 <br>
-2020-08-22 Now featuring images from the CIC hut :)
+<!--2020-08-22 Now featuring images from the CIC hut :)
 <br>
 2020-08-23 Low graphics version
 <br>
+-->
 <a href="https://raw.githubusercontent.com/jdconey/scottish_winter/master/upd.txt" target="_blank">Last Image Update</a> (UK Local time): 
 <object data="upd.txt" width="250" height="20">
 Not supported
@@ -150,10 +151,17 @@ The scripts to grab images run on the hour, every hour from 8 am until 4 pm UK t
 These photos come with a health warning - I scrape the latest image from each site. Most of the images have date/timestamps <b>on each image</b>. 
 The names of the directories in the archive are the date/time that the images are grabbed from the web and are not necessarily the actual date/time that the the photos within were taken.
 
-
-<p class="text-left">
-<b>Other relevant links</b>
-<ul class="text-left">
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Relevant links</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+	  <ul class="text-left">
 <li><a href="https://www.sais.gov.uk/" target="_blank">SAIS</a> - the blogs are of much use as well.</li>
 <li><a href="https://www.ukclimbing.com/logbook/conditions/uk_winter/" target="_blank">UKC Winter Connies</a> - Good old UKC</li>
 <li><a href="https://www.mwis.org.uk/" target="_blank">MWIS</a> - don't forget the planning vids on <a href="https://www.youtube.com/channel/UCzyt5nXxMwj3Mj9_Qo3WTTQ/" target="_blank">YouTube</a> - we all love Garry. MWIS also have webcam images on their <a href="https://www.mwis.org.uk/information/webcams" target="_blank">website</a>, as well as <a href="https://www.mwis.org.uk/forecasts/synoptic-charts" target="_blank">synoptic charts and observations</a> from summit weather stations.</li>
@@ -176,11 +184,22 @@ The <a href="https://www.metoffice.gov.uk/weather/specialist-forecasts/coast-and
 -->
 
 </ul>
-</div>
+	  
+	  </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+       Some incoherent ramblings</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
 
-<div class="container-fluid">
-<p class="text-left"><b>Some incoherent ramblings</b>
-<br>
+<p class="text-left">
+
 The smorgasbord of weather forecasting tools out there on the Internet is of immense help when planning trips. 
 Most if not all forecast producers rely on Numerical Weather Prediction (NWP) models, which basically try to numerically solve the differential equations describing the atmosphere for future points in time, given the best guess of current atmospheric conditions.
 Gone are the days of the forecast being absolutely wrong (compare the week's warning we had for Storm Ciara/Dennis in 2020 with the 6 hours warning for the 'Great Storm' in 1987). 
@@ -201,13 +220,22 @@ Spaghetti plots are a nice way to look at this as you watch the different ensemb
 Typically, ensemble forecasts are run on a lower resolution than the single equivalent <i>deterministic</i> forecast - this is worth bearing in mind.
 Both deterministic and ensemble forecasts have their use. 
 
-
-</div>
-
-<div class="container-fluid">
-<p class="text-left"><b>How does this website work?</b>
-<br>
-It's relatively simple to be honest. Most of the webcam images are just jpgs, which are updated every minute or so. The webcam images stay at the same url.
+	  
+	  </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        How does this website work?</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+	  
+<p class="text-left">
+	  It's relatively simple to be honest. Most of the webcam images are just jpgs, which are updated every minute or so. The webcam images stay at the same url.
 I've rigged up a few bash and Python scripts to download these images.
 I've got a Raspberry Pi sitting on my desk which has <code>cron</code> set up to run the scripts nine times a day (8 am till 4 pm). I pull the image repository from GitHub, update it with the new images, and push the changes back to GitHub.
 There's a separate script to tidy things up and archive the older images onto a usb stick plugged into the Pi. 
@@ -217,11 +245,26 @@ All worth it in the end, I promise.
 <br>
 One future job is to see if I can use machine learning to categorise each image to say whether it's snowy or not & then that'd be a cool way to see how many snowy days we have. That's vaguely related to the PhD I'm hoping to start, honest.
 
-
-
+	  
+	  </div>
+    </div>
+  </div>
 </div>
 
+
 <center>
+
+<b>Webpages:</b> <a href="cairngorm.html">Cairngorms</a>|<a href="glencoe.html">Glencoe</a>|<a href="bennevis.html">Ben Nevis</a>|<a href="nevisrange.html">Nevis Range</a>
+<br>
+<b><a href="low_graphics.html">Low Graphics Navigation</a></b>
+<br>
+<b>Archives:</b> <a href="https://github.com/jdconey/scottish_winter/tree/master"><b>Main Page</b></a>|<a href="https://github.com/jdconey/scottish_winter/tree/master/cairngorm">Cairngorms</a>|<a href="https://github.com/jdconey/scottish_winter/tree/master/glencoe">Glencoe</a>|<a href="https://github.com/jdconey/scottish_winter/tree/master/ben_nevis">Ben Nevis</a>|
+<a href="https://github.com/jdconey/scottish_winter/tree/master/nevis_range">Nevis Range</a>
+<br>
+
+
+
+
 <hr>
 </center>
 

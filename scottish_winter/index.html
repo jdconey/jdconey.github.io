@@ -114,8 +114,8 @@ Current Status: Everything is working alright. For now. Expect new images every 
 
 <b>What's new?</b>
 <br>
-2020-09-16 Images every twenty minutes, retained in the online archive for 5 days.
-<br>
+<!--2020-09-16 Images every twenty minutes, retained in the online archive for 5 days.
+<br>-->
 <!--2020-08-22 Now featuring images from the CIC hut :)
 <br>
 2020-08-23 Low graphics version
@@ -230,22 +230,22 @@ Both deterministic and ensemble forecasts have their use.
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        How does this website work?</a>
+        How do webcam images get saved?</a>
       </h4>
     </div>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
 	  
 <p class="text-left">
-	  It's relatively simple to be honest. Most of the webcam images are just jpgs, which are updated every minute or so. The webcam images stay at the same url.
+	  It's relatively simple to be honest. Most of the webcam images are just jpgs, which are updated somewhere between every minute to every twenty (depending on the webcam). The webcam images stay at the same url.
 I've rigged up a few bash and Python scripts to download these images.
-I've got a Raspberry Pi sitting on my desk which has <code>cron</code> set up to run the scripts nine times a day (8 am till 4 pm). I pull the image repository from GitHub, update it with the new images, and push the changes back to GitHub.
+I've got a Raspberry Pi sitting on my desk which has <code>cron</code> set up to run the scripts every twenty minues from 8 am till 4 pm. I pull the image repository from GitHub, update it with the new images, and push the changes back to GitHub.
 There's a separate script to tidy things up and archive the older images onto a usb stick plugged into the Pi. 
 Then everything magically works and I don't lose long weekends to crying at the console window nor browsing Stack Overflow for days on end when I should be doing work instead.
 <br>
 All worth it in the end, I promise.
 <br>
-One future job is to see if I can use machine learning to categorise each image to say whether it's snowy or not & then that'd be a cool way to see how many snowy days we have. That's vaguely related to the PhD I'm hoping to start, honest.
+One future job is to see if I can use machine learning to categorise each image to say whether it's snowy or not & then that'd be a cool way to see how many snowy days we have. That's vaguely related to the PhD I'm about to start, honest.
 
 	  
 	  </div>

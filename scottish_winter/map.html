@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Webcam Map</title>
        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -75,7 +74,77 @@
                 margin: 0 0 1em 0;
             }
         </style>
+<link rel="shortcut icon" type=image/ico" href="favicon.ico" id="favicon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Webcam Map</title>
+<center>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Scottish Winter Webcam Archive</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Index</a></li>
+		<li class="active"><a href="map.html">Webcam Map</a></li>
+		<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cairngorms
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+			<li><a href="cairngorm.html">Latest images</a></li>
+          <li><a href="https://github.com/jdconey/scottish_winter/tree/main/cairngorm">Archive</a></li>
+        </ul>
+      </li>
 		
+	<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Glencoe & Crianlarich
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+			<li><a href="glencoe.html">Latest images</a></li>
+          <li><a href="https://github.com/jdconey/scottish_winter/tree/main/glencoe">Archive</a></li>
+        </ul>
+      </li>
+	
+	<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ben Nevis
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+			<li><a href="ben_nevis.html">Latest images</a></li>
+          <li><a href="https://github.com/jdconey/scottish_winter/tree/main/ben_nevis">Archive</a></li>
+        </ul>
+      </li>
+	  
+	<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nevis Range (Aonach Mor)
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+			<li><a href="nevis_range.html">Latest images</a></li>
+          <li><a href="https://github.com/jdconey/scottish_winter/tree/main/nevis_range">Archive</a></li>
+        </ul>
+      </li>
+      </ul>
+  
+    </div>
+  </div>
+</nav>
+
+
+<center>
+<h1>Webcam Map</h1>
+<h2>UNDER CONSTRUCTION</h2>
+<p>	
     </head>
     <body onload="initialize()">
         <div id="terrain" class="map"></div>

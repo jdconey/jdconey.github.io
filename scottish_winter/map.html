@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>tile.stamen.com: Leaflet</title>
+        <title>Webcam Map</title>
        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -13,12 +13,20 @@
         <script src="://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
         <script type="text/javascript">
             function initialize() {
-			var Stamen_Toner = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
    subdomains: 'abcd',
    minZoom: 0,
    maxZoom: 20,
    ext: 'png'
+});
+			var greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
 });
                 var layers = ["terrain"];
                 for (var i = 0; i < layers.length; i++) {
@@ -28,19 +36,42 @@
                         zoom: 8
                     }); 
 				
-                    map.addLayer(Stamen_Toner);
-					var marker = L.marker([56.8490,-5.0450]).addTo(map);
-					marker.bindPopup("Torlundy <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/ben_nevis/current/torlundy.jpg' width='400 px%'>", {maxWidth : 500});
-                }
+                    map.addLayer(Stamen_Terrain);
+					var marker = L.marker([56.8574344, -5.0512073]).addTo(map);
+					marker.bindPopup("<a href='ben_nevis'>Torlundy</a>. Normal view is towards the North face. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/ben_nevis/current/torlundy.jpg' width='400 px%'>", {maxWidth : 500});
+					var marker = L.marker([56.819619,-5.1356066]).addTo(map);
+					marker.bindPopup("<a href='ben_nevis'>Loch Linne</a>. Normal view is towards the Fort William and Ben Nevis. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/ben_nevis/current/lochlinne.jpg' width='400 px%'>", {maxWidth : 500});
+					var marker = L.marker([56.8054247, -5.0030314]).addTo(map);
+					marker.bindPopup("<a href='ben_nevis'>CIC Hut</a>. Normal view is towards the north face. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/ben_nevis/current/cic.jpg' width='400 px'> <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/ben_nevis/current/cic_zoom.jpg' width='400 px%'>", {maxWidth : 500, maxHeight : 300});
+					var marker = L.marker([56.7216,-5.2341]).addTo(map);
+					marker.bindPopup("<a href='ben_nevis'>Corran Narrows</a>. Normal view is north west to Sgurr na h-Eanchainne. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/ben_nevis/current/Sgurr_na_h-Eanchainne.jpg' width='400 px'>", {maxWidth :500});
+					
+					var marker = L.marker([56.38979,-4.60559], {icon: greenIcon}).addTo(map);
+					marker.bindPopup("<a href='glencoe'>OMC Hut</a>. Normal view is to Ben More. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/glencoe/current/benmore_720p.jpg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([56.68056,-5.11533], {icon: greenIcon}).addTo(map);
+					marker.bindPopup("<a href='glencoe'>Pier House</a>. Normal view is to the Pap of Glencoe and Sgorr nam Fiannaidh. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/glencoe/current/pier_house.png' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([56.612174, -4.849900], {icon: greenIcon}).addTo(map);
+					marker.bindPopup("<a href='glencoe'>Meall a Bhuiridh</a>. Normal view is northwards down the lift. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/glencoe/current/summit.jpeg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([56.617548, -4.844557], {icon: greenIcon}).addTo(map);
+					marker.bindPopup("<a href='glencoe'>Mid Mountain</a>. Normal view is northwards down the lift. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/glencoe/current/mid.jpeg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([56.621211, -4.842787], {icon: greenIcon}).addTo(map);
+					marker.bindPopup("<a href='glencoe'>Plateau Cafe</a>. Normal view is westish, I think. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/glencoe/current/sledge.jpeg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([56.623852, -4.836690], {icon: greenIcon}).addTo(map);
+					marker.bindPopup("<a href='glencoe'>Access chair lift top</a>. Normal view is SSWish, I think, towards Meall a Bhuiridh. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/glencoe/current/access2200.jpeg' width='400 px'>", {maxWidth :500});
+					
+				
+				
+				}
             }
         </script>
         <style type="text/css">
             .map {
                 width: 100%;
-                height: 600px;
+                height: 95vh;
                 margin: 0 0 1em 0;
             }
         </style>
+		
     </head>
     <body onload="initialize()">
         <div id="terrain" class="map"></div>

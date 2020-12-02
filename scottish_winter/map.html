@@ -10,19 +10,25 @@
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
 
-        <script src="stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
+        <script src="://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
         <script type="text/javascript">
             function initialize() {
+			var Stamen_Toner = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+   subdomains: 'abcd',
+   minZoom: 0,
+   maxZoom: 20,
+   ext: 'png'
+});
                 var layers = ["terrain"];
                 for (var i = 0; i < layers.length; i++) {
                     var layer = layers[i];
                     var map = new L.Map(layer, {
                         center: new L.LatLng(56.810,-4.285),
                         zoom: 8
-                    });
-                    map.addLayer(new L.StamenTileLayer(layer, {
-                        detectRetina: true
-                    }));
+                    }); 
+				
+                    map.addLayer(Stamen_Toner);
 					var marker = L.marker([56.8490,-5.0450]).addTo(map);
 					marker.bindPopup("Torlundy <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/ben_nevis/current/torlundy.jpg' width='400 px%'>", {maxWidth : 500});
                 }

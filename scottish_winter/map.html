@@ -27,6 +27,24 @@
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
 });
+
+var redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+var goldIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
                 var layers = ["terrain"];
                 for (var i = 0; i < layers.length; i++) {
                     var layer = layers[i];
@@ -62,8 +80,26 @@
 					var marker = L.marker([56.6164150707114, -4.839577894658799], {icon: greenIcon}).addTo(map);
 					marker.bindPopup("<a href='glencoe'>Flypaper</a>. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/glencoe/current/flypaper.jpeg' width='400 px'>", {maxWidth :500});
 					
-				
-				
+					var marker = L.marker([56.821834, -4.964705], {icon: redIcon}).addTo(map);
+					marker.bindPopup("<a href='nevis_range'>Summit Tow</a>. Looks northwestish down the tow. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/nevis_range/current/summit.jpeg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([56.835992, -4.973346], {icon: redIcon}).addTo(map);
+					marker.bindPopup("<a href='nevis_range'>Gondola Summit</a>. Looks northish down to Sgurr Finniosgaig. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/nevis_range/current/gondola.png' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([56.831327, -4.975258], {icon: redIcon}).addTo(map);
+					marker.bindPopup("<a href='nevis_range'>Goose Gully</a>. Looks northish down to Sgurr Finniosgaig, and southish up the hill, respectively. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/nevis_range/current/lowergoose.jpeg' width='400 px'> <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/nevis_range/current/goosegully.jpeg' width='400 px'>", {maxWidth :500});
+					
+					var marker = L.marker([57.176340, -3.818240], {icon: goldIcon}).addTo(map);
+					marker.bindPopup("<a href='cairngorm'>Inverdruie</a>. Looks south eastish towards the ski centre and Lairig Ghru <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/cairngorm@2.jpeg' width='400 px'> <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/lairig-ghru@2.jpeg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([57.133362, -3.670654], {icon: goldIcon}).addTo(map);
+					marker.bindPopup("<a href='cairngorm'>Ski Centre Car Park</a>. Variety of views, mostly northish. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/maincarpark-full.jpg' width='400 px'> <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/BaseStation-full.jpg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([57.127679, -3.660869], {icon: goldIcon}).addTo(map);
+					marker.bindPopup("<a href='cairngorm'>White Lady</a>. Variety of views, mostly northish. <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/morlich-full.jpg' width='400 px'> <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/whitelady-full.jpg' width='400 px'>  <br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/sunkid-full.jpg' width='400 px'>", {maxWidth :500});
+					var marker = L.marker([57.167822, -3.701553], {icon: goldIcon}).addTo(map);
+					marker.bindPopup("<a href='cairngorm'>Ski Centre from Loch Morlich</a>. Looks south to south eastish towards the ski centre.<br> <img src='https://raw.githubusercontent.com/jdconey/scottish_winter/main/cairngorm/current/morlich_ground.png' width='400 px'>", {maxWidth :500});
+					
+					
+					
+					
+					
 				}
             }
         </script>

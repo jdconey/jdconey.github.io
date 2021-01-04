@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style>
+body {
+  font-family: "Computer Modern Sans", sans-serif;
+}
+</style>
+       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+        <script src="://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
+        <script type="text/javascript">
+            function initialize() {
+			var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>. <a href="https://github.com/pointhi/leaflet-color-markers/">Markers</a> under BSD Licence.',
+   subdomains: 'abcd',
+   minZoom: 0,
+   maxZoom: 20,
+   ext: 'png'
+});
+			var greenIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+var redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+var goldIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+                var layers = ["terrain"];
+                for (var i = 0; i < layers.length; i++) {
+                    var layer = layers[i];
+                    var map = new L.Map(layer, {
+                        center: new L.LatLng(53.810,-1.285),
+                        zoom: 7
+                    }); 
+				
+                    map.addLayer(Stamen_Terrain);
+					var marker = L.marker([53.602745 , -1.9319594], {icon: goldIcon}).addTo(map);
+					marker.bindPopup("<a href='https://www.ldwa.org.uk/ldp/members/show_path.php?path_name=Stanza+Stones+Trail' target='_blank'>Stanza Stones Trail</a><p>72 km/45 miles<p><a href='docs/Stanza-Stones-Trail-Guide.pdf' target='_blank'>Trail Guide</a>", {maxWidth :500});
+					
+				}
+            }
+        </script>
+        <style type="text/css">
+            .map {
+                width: 100%;
+                height: 90vh;
+                margin: 0 0 1em 0;
+            }
+        </style>
+<link rel="shortcut icon" type=image/ico" href="favicon.ico" id="favicon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Running Challenges Map</title>
+<center>
+<h1>Running Challenges Map</h1>
+<p>This is a map of various running challenges in the UK. I am focusing (to start with) on the North of England, because that's where I'm based. When I'm looking for inspiration for big fun days out, it's tricky to see what's already been done, and where these routes are. Hopefully this is a more useful compedium. The aim is to show routes that are neither race routes nor long distance paths marked on OS maps.
+Much of these are sourced from the <a href="https://www.gofar.org.uk/">Go Far</a> website, the <a href="https://www.ldwa.org.uk/">LDWA</a>, as well as the FRA forums, and various running groups on Facebook.
+</center>
+<br>
+
+Key:<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png" height=12px> <30 miles; <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" height=12px> 30 - 50 miles; <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" height=12px> >50 miles
+    </head>
+    <body onload="initialize()">
+        <div id="terrain" class="map"></div>
+    </body>
+</html>

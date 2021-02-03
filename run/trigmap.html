@@ -27603,13 +27603,34 @@ var overlayMaps = {
 <h1>Britain and Ireland Trig Pillars Map</h1>
 </center>
 <center>
-This is a map of the OS trig pillars in Britain and Ireland, sourced from <a href="http://trigpointing.uk/" target="_blank">TrigpointingUK</a>. Use the layers control to filter which condition(s) of trig you wish to see. The categories are fairly self explanatory - my reading of "Converted" is that it was a pillar that has been converted to a different type of survey monument, e.g. a buried block.
+This is a map of the OS trig pillars in Britain and Ireland, sourced from <a href="http://trigpointing.uk/" target="_blank">TrigpointingUK</a>. Use the layers control to filter which condition(s) of trig you wish to see. The categories are fairly self explanatory - my reading of "Converted" is that it was a pillar that has been converted to a different type of survey monument, e.g. a buried block. "Unknown" and "Not logged" are few in number for pillars, so don't worry too much about those. I've had some trouble with some of the trig points (on Ireland and the Channel Islands mainly), as the library I use to convert between the OS grid reference and latitude and longitude throws an error for trig points there as some locations are outside the British Ordnance Survey's main national grid. For interest, these outlying trigs are linked at the foot of the page.
     </head>
     <body onload="initialize()">
         <div id="terrain" class="map"></div>
     
 	<b>Condition Key</b>: <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png" height=20px> Good, Moved, Slightly Damaged; <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" height=20px>Unreachable but visible, Damaged, Toppled; <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png" height=20px> Remains, Possibly missing; <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" height=20px> Destroyed, Converted, Not logged, Unknown
-<center>
+</center>
+<p>
+Data accurate as at 2021-01-20 1:41 PM
+
+<p>
+
+<b>Outliers</b>
+<p>
+<ul>
+
+<li><a href='http://trigpointing.uk/trig/7361' target='_blank'>Truskmore</a>; Location - MZ 86383 16308; Condition - Slightly damaged</li>
+<li><a href='http://trigpointing.uk/trig/25727' target='_blank'>Cluidaniller</a>; Location - MZ 82568 85820; Condition - Good</li>
+<li><a href='http://trigpointing.uk/trig/7345' target='_blank'>Slieve League</a>; Location - MZ 67659 49125; Condition - Damaged</li>
+<li><a href='http://trigpointing.uk/trig/7343' target='_blank'>Birreencorragh</a>; Location - RE 09504 80322; Condition - Converted</li>
+<li><a href='http://trigpointing.uk/trig/7356' target='_blank'>Musheramore (OSI)</a>; Location - RP 21370 58038; Condition - Good</li>
+<li><a href='http://trigpointing.uk/trig/7340' target='_blank'>Mullaghanish</a>; Location - RP 09709 55685; Condition - Destroyed</li>
+<li><a href='http://trigpointing.uk/trig/7341' target='_blank'>Hungry Hill</a>; Location - RO 61800 27500; Condition - Good</li>
+<li><a href='http://trigpointing.uk/trig/25777' target='_blank'>Essex Hill (Alderney)</a>; Location - WA 59200 07440; Condition - Not Logged</li>
+<li><a href='http://trigpointing.uk/trig/25773' target='_blank'>Le Rond But (Alderney)</a>; Location - WA 57817 06737; Condition - Good</li>
+<li><a href='http://trigpointing.uk/trig/25776' target='_blank'>Giffoine (Alderney)</a>; Location - WA 55526 06559; Condition - Not Logged</li>
+
+    </ul>
     </body>
 </html>
 

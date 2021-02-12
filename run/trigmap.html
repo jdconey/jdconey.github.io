@@ -78,7 +78,7 @@ var blueIcon = new L.Icon({
   shadowSize: [41, 41]
 });
 	
-		var MarkerAttrib = ' <a href="https://github.com/pointhi/leaflet-color-markers/">Markers</a> under BSD Licence.'
+		var MarkerAttrib = ' | <a href="https://github.com/pointhi/leaflet-color-markers/">Markers</a> under BSD Licence.'
 
 	
 		//OSM tiles attribution and URL
@@ -99,11 +99,20 @@ var blueIcon = new L.Icon({
 		var stamenterURL = 'http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}';
 		var stamenterAttrib = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>.' + MarkerAttrib;
 
-
+		//TF OpenCycleMap
+		var OCMURL = 'https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=45370e8458bb48e0b213a4ed486fe14c';
+		var OCMAttrib = 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'+MarkerAttrib;
+		
+		//TF Landscape
+		var LScURL = 'https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=45370e8458bb48e0b213a4ed486fe14c';
+		var LScAttrib = 'Maps © <a href="http://www.thunderforest.com">Thunderforest</a>, Data © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'+MarkerAttrib;
+		 
 
 		//Creation of map tiles
 		var osmMap = L.tileLayer(osmURL, {attribution: osmAttrib});
 		var cartoMap = L.tileLayer(cartoURL, {attribution: cartoAttrib});
+		var OCMMap = L.tileLayer(OCMURL, {attribution: OCMAttrib});
+		var LScMap = L.tileLayer(LScURL, {attribution: LScAttrib});
 		var stamenMap = L.tileLayer(stamenURL,{
 			attribution: stamenAttrib,
 			subdomains: 'abcd',
@@ -126,7 +135,9 @@ var blueIcon = new L.Icon({
 
 		//Base layers definition and addition
 		var baseLayers = {
-			"OSM Mapnik": osmMap,
+			"OpenStreetMap": osmMap,
+			"Thunderforest Landscape": LScMap,
+			"Thunderforest OpenCycleMap": OCMMap,
 			"Carto Voyager": cartoMap,
 			"Stamen Terrain": stamenTerMap,
 			"Stamen Toner": stamenMap

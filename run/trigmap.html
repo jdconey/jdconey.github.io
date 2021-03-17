@@ -160,20 +160,6 @@ var Unknown = L.markerClusterGroup([])
 var NotLogged = L.markerClusterGroup([])          
 
 
-
-					
-var Good = L.markerClusterGroup([])
-var Moved = L.markerClusterGroup([])
-var Slightlydamaged = L.markerClusterGroup([])
-var Unreachablebutvisible = L.markerClusterGroup([])
-var Damaged = L.markerClusterGroup([])
-var Toppled = L.markerClusterGroup([])
-var Remains = L.markerClusterGroup([])
-var Possiblymissing = L.markerClusterGroup([])
-var Destroyed = L.markerClusterGroup([])
-var Converted = L.markerClusterGroup([])
-var Unknown = L.markerClusterGroup([])
-var NotLogged = L.markerClusterGroup([])
 var TP1385 = L.marker([53.84960424589173,-1.4576871860276912], {icon: greenIcon});
     					TP1385.bindPopup("<a href='http://trigpointing.uk/trig/1385' target='_blank'>Birkby Hill</a><br>Condition: Good", {maxWidth :500});
                 Good.addLayer(TP1385);
@@ -27630,10 +27616,10 @@ map.addLayer(Damaged);
 map.addLayer(Toppled);
 map.addLayer(Remains);
 map.addLayer(Possiblymissing);
-map.addLayer(Destroyed);
-map.addLayer(Converted);
-map.addLayer(Unknown);
-map.addLayer(NotLogged);
+//map.addLayer(Destroyed);
+//map.addLayer(Converted);
+//map.addLayer(Unknown);
+//map.addLayer(NotLogged);
 var overlayMaps = {
 "Good": Good,
 "Moved": Moved,

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style>
+body {
+  font-family: "Computer Modern Sans", sans-serif;
+  margin: 0% 5% 0% 1%;
+}
+</style>
+</head>
+<body>
+
+<title>Precipitation Nowcasting</title>
+<center>
+<h1>Precipitation Nowcasting</h1>
+</center>
+I've been having a go at trying to make a simple "nowcasting" tool for UK precipitation.
+Nowcasting is a term used to describe short-term forecasting (typically less than 6 hours ahead).
+This has been borne from a (slight) frustration with the Met Office's map tools, where there is often a strong disconnect between where the radar observations stop and the NWP begins.
+So I've had a go at seeing if we can do some nowcasting, to predict how the radar observations change with time.
+
+This approach uses <a href="https://pysteps.github.io/">pySTEPS</a>, an optical flow method designed with precipitation nowcasting in mind.
+It takes a field of rainfall observations (such as the one on the left below), and calculates the motion for that field -- how this field changes with time (shown below on the right).
+<br>
+<table>
+<tr>
+<th><img src="obs_12.png" width=100% alt="Precipitation radar obs">
+</th>
+<th>
+<img src="pysteps_ex.png" width=60% alt="Precipitation radar obs">
+</th>
+</tr>
+
+<tr>
+<th>Example precipitation radar observations</th>
+<th>Computed motion of the precipitation, using 12 most recent observations (3hrs)</th>
+</tr>
+</table>
+<br>
+
+So having computed this, we calculate how the precipitation is supposed to move in the future to produce our nowcast.
+An example is shown below.
+
+<br>
+<img src="compare.gif" width=70%>
+<br>
+
+It works reasonably well, degrading over time. Which isn't a surprise.
+
+Several studies have been done into nowcasting precipitation over the UK, but nobody seems to release a forecast openly! Google Deepmind <a href="https://deepmind.google/discover/blog/nowcasting-the-next-hour-of-rain/">have done it</a> for starters, using a deep learning model but benchmarking it against pySTEPS.
+<p>
+<a href="forecast.html">Forecast</a>
+
+</body>
+</html>

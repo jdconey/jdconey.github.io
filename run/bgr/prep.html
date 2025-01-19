@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<style>
+body {
+  font-family: "Computer Modern Sans", sans-serif;
+}
+</style>
+
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: scroll;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BGR Prep Diary</title>
+<center>
+<h1>BGR Prep Diary</h1>
+</head>
+</center>
+<body>
+Some mates want to do a Bob Graham Round in 2025. 
+I'm not committing until I do some training, then see how we go from there.
+Hopefully this mini diary thing keeps me accountable. 
+
+<h2> January 2025</h2>
+  <button class="accordion">w/e 5th Jan</button>
+  <div class="panel">
+    Slow start to this, away with pals for New Year in North Wales so got a bit of climbing in the legs the Saturday and Sunday before. 
+    Then windy weather took hold making going out in the fells not a great option. 
+    Then got ill and didn't run for four days, and it snowed making going out anywhere on Saturday and Sunday a non-starter.
+    Good to see people regardless for New Year.
+    <p></p>
+    3 runs / 20.3 miles / 4h 20m / 3405'   
+  </div>
+
+  <button class="accordion">w/e 12th Jan</button>
+  <div class="panel">
+    Sluggish start to the week, finally getting over my mini-lurgy, and snow and ice weren't going anywhere (and nor were the trains to work half the time).
+    Lurgy was the irritating sort that was perfectly fine to work with but not necessarily run.
+
+    Mananged to leave the house on Wednesday for a tentative run round the woods and playing fields in the snow, and again the following afternoon wfh.
+
+    Away meeting up with work colleagues on Saturday in Wales, and made up a good chunk of climbing on the Sunday on the excellently named Blorenge.
+    Bumped into Ian who was doing reps and had a two hour head start on me, and he very kindly let me hang off the back of him. 7000' for me in one fell swoop pretty much
+
+    <p></p>
+    3 runs / 26.2 miles / 6h 14m / 7870'
+  </div>
+
+  <button class="accordion">w/e 19th Jan</button>
+  <div class="panel">
+    Fine week at work, didn't run till Wednesday because of Sunday's Blorenge shenanigans. 
+    It's quite flat round work but there are some very short hills (i.e. 0.1 miles long at 10%) in the park but decided to just focus my climbing on the weekend in the "proper" hills.
+
+    Saturday was spent on Pendle doing reps of Big Dipper, seems like I'm not the only person to have done reps there before as there's a Strava segment.
+    All in (having plodded up Mearley Moor first) I got some 7000' out of my 13.5 miles so a decent amount of climb done and time on feet.
+    The legs don't hurt as much as they did last week either, which is good. The climbs are shorter though (about half the climb per rep) at a similar gradient.
+
+    I did the Stanbury Splash on Sunday, did get a few comments about my mad day on Pendle and asking if I have any big plans. 
+    Someone asked if I was training for a Paddy Buckley -- I said I'd do a Bob Graham before a Paddy Buckley.
+
+    It is early days. But good to see mates, and do my first race since Tour of Pendle, even if I was about two minutes slower than last year.
+
+    <p></p>
+    5 runs / 37.4 miles / 7h 33m / 9452'
+  </div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+
+<p>
+
+
+</body>
+
+</html>

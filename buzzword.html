@@ -1,0 +1,18 @@
+<html>
+<h1>Make Jordan a buzzword</h1>
+<p>Stuck for a buzzword? This can help! Press the button or refresh the page.
+<p>
+  <button onclick="randomizeFunction()">Generate a buzzword!!</button>
+  
+  <p id="randomWord"></p>
+</html>
+
+<script>
+const myList = ["leverage", "blockers", "synergy", "room is against them", "chopping and changing", "hard blockers", "onward momentum", "human loop", "re-architecting", "orchestrate", "culture change", "wider discussion", "general thrust", "community by community", "levels of granularity", "general principles", "community approval", "if the pusher successfully reflects on itself", "parameter matchment", "pipe dream"];
+
+randomizeFunction()
+
+function randomizeFunction() {
+    document.getElementById("randomWord").innerHTML = myList[Math.floor(Math.random() * myList.length)]
+}
+</script>

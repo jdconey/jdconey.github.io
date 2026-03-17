@@ -18,7 +18,6 @@ body {
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
 
-        <script src="://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
         
         	<link rel="stylesheet" href="MarkerCluster.css" />
 	<link rel="stylesheet" href="MarkerCluster.Default.css" />
@@ -82,24 +81,13 @@ var blueIcon = new L.Icon({
 	
 		var MarkerAttrib = ' | <a href="https://github.com/pointhi/leaflet-color-markers/">Markers</a> under BSD Licence.'
 
-	
-		//OSM tiles attribution and URL
+	        //OSM tiles attribution and URL
 		var osmLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>.';
-		var osmURL = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-		var osmAttrib = '&copy; ' + osmLink + MarkerAttrib;
 		
 		//Carto tiles attribution and URL
 		var cartoLink = '<a href="http://cartodb.com/attributions">CartoDB</a>.';
 		var cartoURL = ' https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png';
 		var cartoAttrib = '&copy; ' + osmLink + ' &copy; ' + cartoLink + MarkerAttrib;
-
-		//Stamen Toner tiles attribution and URL
-		var stamenURL = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.{ext}';
-		var stamenAttrib = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>.' + MarkerAttrib;
-
-		//Stamen Terrain tiles attribution and URL
-		var stamenterURL = 'http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.{ext}';
-		var stamenterAttrib = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>.' + MarkerAttrib;
 
 		//TF OpenCycleMap
 		var OCMURL = 'https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=45370e8458bb48e0b213a4ed486fe14c';
@@ -111,39 +99,23 @@ var blueIcon = new L.Icon({
 		 
 
 		//Creation of map tiles
-		var osmMap = L.tileLayer(osmURL, {attribution: osmAttrib});
+		
 		var cartoMap = L.tileLayer(cartoURL, {attribution: cartoAttrib});
 		var OCMMap = L.tileLayer(OCMURL, {attribution: OCMAttrib});
 		var LScMap = L.tileLayer(LScURL, {attribution: LScAttrib});
-		var stamenMap = L.tileLayer(stamenURL,{
-			attribution: stamenAttrib,
-			subdomains: 'abcd',
-			minZoom: 0,
-			maxZoom: 20,
-			ext: 'png'
-		});
-		var stamenTerMap = L.tileLayer(stamenterURL,{
-			attribution: stamenAttrib,
-			subdomains: 'abcd',
-			minZoom: 0,
-			maxZoom: 20,
-			ext: 'png'
-		});
+		
 
 		//Map creation
 		var map = L.map('map',{
-			layers: [osmMap]
+			layers: [cartoMap]
 		}).setView([55, -2], 5);
 
 		//Base layers definition and addition
 		var baseLayers = {
-			"OpenStreetMap": osmMap,
 			"Thunderforest Landscape": LScMap,
 			"Thunderforest OpenCycleMap": OCMMap,
-			"Carto Voyager": cartoMap,
-			"Stamen Terrain": stamenTerMap,
-			"Stamen Toner": stamenMap
-		};
+			"Carto Voyager": cartoMap
+			};
 
 
 var markers = L.markerClusterGroup();
